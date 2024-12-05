@@ -1,6 +1,7 @@
 import 'package:clot_app/core/constants/color.dart';
 import 'package:clot_app/core/route/rout_names.dart';
-import 'package:clot_app/features/home/widgets/clipr_rect.dart';
+import 'package:clot_app/features/home/widgets/custom_clip_rect.dart';
+import 'package:clot_app/features/home/widgets/my_circle_avatar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,78 +21,52 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: CustomColor.mainColor,
         appBar: AppBar(
           backgroundColor: CustomColor.mainColor,
-          leading: Image.asset("assets/images/circle.png"),
-          // title: Center(
-          //   child: SizedBox(
-          //     width: 104,
-          //     child: Row(
-          //       children: [
-          //         ElevatedButton(
-          //           style: ElevatedButton.styleFrom(
-          //             backgroundColor: CustomColor.greyColor,
-          //           ),
-          //           onPressed: () {},
-          //           child: const Row(
-          //             children: [
-          //               Text(
-          //                 "Men ",
-          //                 style: TextStyle(color: Colors.white),
-          //               ),
-          //               Icon(
-          //                 Icons.arrow_drop_down,
-          //                 color: Colors.white,
-          //               ),
-          //             ],
-          //           ),
-          //         ),
-          //       ],
-          //     ),
-          //   ),
-          // ),
+          leading: GestureDetector(
+            onTap: () {},
+            child: Image.asset("assets/images/circle.png"),
+          ),
           title: Center(
             child: Container(
+              padding: const EdgeInsets.only(left: 12),
               width: 100,
               decoration: BoxDecoration(
                 color: CustomColor.greyColor,
                 borderRadius: BorderRadius.circular(100),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 12),
-                child: DropdownButton(
-                  value: selectedGender,
-                  dropdownColor: CustomColor.greyColor,
-                  underline: const SizedBox(),
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      selectedGender = newValue!;
-                    });
-                  },
-                  items: const [
-                    DropdownMenuItem(
-                      value: "Men",
-                      child: Row(
-                        children: [
-                          Text(
-                            "Men",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ],
-                      ),
+              child: DropdownButton(
+                value: selectedGender,
+                dropdownColor: CustomColor.greyColor,
+                underline: const SizedBox(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    selectedGender = newValue!;
+                  });
+                },
+                items: const [
+                  DropdownMenuItem(
+                    value: "Men",
+                    child: Row(
+                      children: [
+                        Text(
+                          "Men",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
                     ),
-                    DropdownMenuItem(
-                      value: "Women",
-                      child: Row(
-                        children: [
-                          Text(
-                            "Women",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ],
-                      ),
+                  ),
+                  DropdownMenuItem(
+                    value: "Women",
+                    child: Row(
+                      children: [
+                        Text(
+                          "Women",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
                     ),
-                  ],
-                  icon: Image.asset("assets/images/down_arrow.png"),
-                ),
+                  ),
+                ],
+                icon: Image.asset("assets/images/down_arrow.png"),
               ),
             ),
           ),
@@ -133,14 +108,15 @@ class _HomePageState extends State<HomePage> {
                       filled: true,
                       fillColor: Colors.transparent,
                       hintText: 'Search',
-                      prefixIcon: Icon(Icons.search, color: Colors.white),
+                      prefixIcon:
+                          Icon(Icons.search, color: CustomColor.whiteColor),
                       contentPadding: EdgeInsets.symmetric(
                         vertical: 15.0,
                         horizontal: 20.0,
                       ),
                     ),
                     style: TextStyle(
-                      color: Colors.white,
+                      color: CustomColor.whiteColor,
                     ),
                   ),
                 ),
@@ -181,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     circleAvatar(
-                      "assets/images/shop.png",
+                      "assets/category_images/hoodie.png",
                       "Hoodies",
                     ),
                     const SizedBox(
@@ -227,7 +203,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, RouteNames.productsCategories);
+                      Navigator.pushNamed(
+                          context, RouteNames.productsCategories);
                     },
                     child: const Text(
                       "See All",
@@ -242,25 +219,20 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: 10,
               ),
-              const SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
+              SizedBox(
+                height: 350,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: const [
                     CustomClipRRect(
                       imgURL: "assets/images/boy.png",
                       text: "Men's Harrington Jacket",
                       price: 1755,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
                     CustomClipRRect(
                       imgURL: "assets/images/boy.png",
                       text: "Men's Harrington Jacket",
                       price: 1755,
-                    ),
-                    SizedBox(
-                      width: 10,
                     ),
                     CustomClipRRect(
                       imgURL: "assets/images/boy.png",
@@ -285,7 +257,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, RouteNames.productsCategories);
+                      Navigator.pushNamed(
+                          context, RouteNames.productsCategories);
                     },
                     child: const Text(
                       "See All",
@@ -306,16 +279,10 @@ class _HomePageState extends State<HomePage> {
                       text: "Men's Harrington Jacket",
                       price: 1755,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
                     CustomClipRRect(
                       imgURL: "assets/images/boy.png",
                       text: "Men's Harrington Jacket",
                       price: 1755,
-                    ),
-                    SizedBox(
-                      width: 10,
                     ),
                     CustomClipRRect(
                       imgURL: "assets/images/boy.png",
@@ -331,25 +298,4 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-}
-
-//! Widgets
-Widget circleAvatar(String imgURL, String text) {
-  return Column(
-    children: [
-      CircleAvatar(
-        backgroundColor: CustomColor.buttonColor,
-        backgroundImage: AssetImage(
-          imgURL,
-        ),
-        radius: 40,
-      ),
-      Text(
-        text,
-        style: const TextStyle(
-          color: Colors.white,
-        ),
-      ),
-    ],
-  );
 }

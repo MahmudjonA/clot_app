@@ -1,6 +1,6 @@
 import 'package:clot_app/core/constants/color.dart';
 import 'package:clot_app/core/route/rout_names.dart';
-import 'package:clot_app/features/home/widgets/clipr_rect.dart';
+import 'package:clot_app/features/home/widgets/custom_clip_rect.dart';
 import 'package:flutter/material.dart';
 import '../auth/widgets/arrow.dart';
 
