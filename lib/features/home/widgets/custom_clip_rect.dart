@@ -18,6 +18,7 @@ class CustomClipRRect extends StatelessWidget {
       child: Column(
         children: [
           ClipRRect(
+
             borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(8),
               topRight: Radius.circular(8),

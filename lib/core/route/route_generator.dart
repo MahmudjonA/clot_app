@@ -1,8 +1,8 @@
 import 'package:clot_app/core/route/rout_names.dart';
 import 'package:clot_app/features/bottom_nav_bar.dart';
 import 'package:clot_app/features/auth/sign_up/sign_up.dart';
-import 'package:clot_app/features/home/products_categories.dart';
-import 'package:clot_app/features/home/shop_categories.dart';
+import 'package:clot_app/features/home/products_categories_page.dart';
+import 'package:clot_app/features/home/shop_categories_page.dart';
 import 'package:clot_app/features/into/splash_page.dart';
 import 'package:clot_app/features/auth/sign_up/about.dart';
 import 'package:clot_app/features/auth/sign_in/reset_page.dart';
@@ -41,7 +41,8 @@ class AppRoute {
       case RouteNames.shopCategories:
         return MaterialPageRoute(builder: (_) => const ShopCategories());
       case RouteNames.productsCategories:
-        return MaterialPageRoute(builder: (_) => const ProductsCategories());
+        String category = routeSettings.arguments as String;
+        return MaterialPageRoute(builder: (_) =>  ProductsCategories(category: category,));
       case RouteNames.addressEdit:
         return MaterialPageRoute(builder: (_) => const AddressEdit());
       // case RouteNames.profilePage:
