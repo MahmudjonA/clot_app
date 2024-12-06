@@ -42,6 +42,9 @@ class ProductsCategories extends StatelessWidget {
               ),
               Expanded(
                 child: GridView.count(
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  childAspectRatio: 0.6,
                   crossAxisCount: 2,
                   children: const [
                     CustomClipRRect(
