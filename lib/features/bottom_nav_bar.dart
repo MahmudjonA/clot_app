@@ -1,4 +1,7 @@
 import 'package:clot_app/core/constants/color.dart';
+import 'package:clot_app/features/notification/notification_page.dart';
+import 'package:clot_app/features/order/order_page.dart';
+import 'package:clot_app/features/profile/profile_page.dart';
 import 'package:flutter/material.dart';
 
 import 'home/home_page.dart';
@@ -15,9 +18,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   List<Widget> pages = const [
     HomePage(),
-    HomePage(),
-    HomePage(),
-    HomePage(),
+    NotificationPage(),
+    OrderPage(),
+    ProfilePage(),
   ];
 
   @override
@@ -50,7 +53,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             "assets/images/notification.png",
           ),
           BottomNavigationBarItemWidget(
-            " Mark",
+            " Orders",
             "assets/images/mark.png",
           ),
           BottomNavigationBarItemWidget(

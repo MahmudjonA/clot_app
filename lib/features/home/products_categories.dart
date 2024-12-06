@@ -4,14 +4,9 @@ import 'package:clot_app/features/home/widgets/custom_clip_rect.dart';
 import 'package:flutter/material.dart';
 import '../auth/widgets/arrow.dart';
 
-class ProductsCategories extends StatefulWidget {
+class ProductsCategories extends StatelessWidget {
   const ProductsCategories({super.key});
 
-  @override
-  State<ProductsCategories> createState() => _ProductsCategoriesState();
-}
-
-class _ProductsCategoriesState extends State<ProductsCategories> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,15 +25,15 @@ class _ProductsCategoriesState extends State<ProductsCategories> {
               children: [
                 Arrow(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, RouteNames.shopCategories);
+                    Navigator.pushNamed(context, RouteNames.bottomNavBar);
                   },
-                  imgURL: "assets/images/back_arrow.png",
+                  imgURL: "assets/icons/back_arrow.png",
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 const Text(
-                  "Data",
+                  "Products",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -48,42 +43,61 @@ class _ProductsCategoriesState extends State<ProductsCategories> {
                 const SizedBox(
                   height: 20,
                 ),
-                const Wrap(
-                  spacing: 15, // Space between items horizontally
-                  runSpacing: 15, // Space between rows vertically
+                Wrap(
+                  direction: Axis.horizontal,
+                  spacing: 5,
+                  runSpacing: 12,
                   children: [
-                    CustomClipRRect(
-                      imgURL: "assets/images/boy.png",
-                      text: "Men's Harrington Jacket",
-                      price: 1755,
+                    SizedBox(
+                      width: (MediaQuery.of(context).size.width - 30) / 2,
+                      child: const CustomClipRRect(
+                        imgURL: "assets/images/boy.png",
+                        text: "Men's Harrington Jacket",
+                        price: 1755,
+                      ),
                     ),
-                    CustomClipRRect(
-                      imgURL: "assets/images/boy.png",
-                      text: "Men's Harrington Jacket",
-                      price: 1755,
+                    SizedBox(
+                      width: (MediaQuery.of(context).size.width - 30) / 2,
+                      child: const CustomClipRRect(
+                        imgURL: "assets/images/boy.png",
+                        text: "Men's Harrington Jacket",
+                        price: 1755,
+                      ),
                     ),
-                    CustomClipRRect(
-                      imgURL: "assets/images/boy.png",
-                      text: "Men's Harrington Jacket",
-                      price: 1755,
+                    SizedBox(
+                      width: (MediaQuery.of(context).size.width - 30) / 2,
+                      child: const CustomClipRRect(
+                        imgURL: "assets/images/boy.png",
+                        text: "Men's Harrington Jacket",
+                        price: 1755,
+                      ),
                     ),
-                    CustomClipRRect(
-                      imgURL: "assets/images/boy.png",
-                      text: "Men's Harrington Jacket",
-                      price: 1755,
+                    SizedBox(
+                      width: (MediaQuery.of(context).size.width - 30) / 2,
+                      child: const CustomClipRRect(
+                        imgURL: "assets/images/boy.png",
+                        text: "Men's Harrington Jacket",
+                        price: 1755,
+                      ),
                     ),
-                    CustomClipRRect(
-                      imgURL: "assets/images/boy.png",
-                      text: "Men's Harrington Jacket",
-                      price: 1755,
+                    SizedBox(
+                      width: (MediaQuery.of(context).size.width - 30) / 2,
+                      child: const CustomClipRRect(
+                        imgURL: "assets/images/boy.png",
+                        text: "Men's Harrington Jacket",
+                        price: 1755,
+                      ),
                     ),
-                    CustomClipRRect(
-                      imgURL: "assets/images/boy.png",
-                      text: "Men's Harrington Jacket",
-                      price: 1755,
+                    SizedBox(
+                      width: (MediaQuery.of(context).size.width - 30) / 2,
+                      child: const CustomClipRRect(
+                        imgURL: "assets/images/boy.png",
+                        text: "Men's Harrington Jacket",
+                        price: 1755,
+                      ),
                     ),
                   ],
-                ),
+                )
               ],
             ),
           ),

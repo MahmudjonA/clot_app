@@ -10,4 +10,6 @@ class RouteNames {
   static const String bottomNavBar = '/bottomNavBar';
   static const String shopCategories = '/shopCategories';
   static const String productsCategories = '/productCategories';
+  static const String addressEdit = '/addressEdit';
+  // static const String profilePage = '/profilePage';
 }

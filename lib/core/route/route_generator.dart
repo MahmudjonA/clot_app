@@ -8,11 +8,14 @@ import 'package:clot_app/features/auth/sign_up/about.dart';
 import 'package:clot_app/features/auth/sign_in/reset_page.dart';
 import 'package:clot_app/features/auth/sign_in/send_email.dart';
 import 'package:clot_app/features/auth/sign_in/sign_in_email.dart';
+import 'package:clot_app/features/profile/address_edit.dart';
+import 'package:clot_app/features/profile/profile_page.dart';
 import 'package:flutter/material.dart';
 import '../../features/auth/sign_in/sing_in_password.dart';
 
 class AppRoute {
   BuildContext context;
+
   AppRoute({required this.context});
 
   Route onGenerateRoute(RouteSettings routeSettings) {
@@ -37,8 +40,12 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => const BottomNavBar());
       case RouteNames.shopCategories:
         return MaterialPageRoute(builder: (_) => const ShopCategories());
-        case RouteNames.productsCategories:
+      case RouteNames.productsCategories:
         return MaterialPageRoute(builder: (_) => const ProductsCategories());
+      case RouteNames.addressEdit:
+        return MaterialPageRoute(builder: (_) => const AddressEdit());
+      // case RouteNames.profilePage:
+      //   return MaterialPageRoute(builder: (_) => const ProfilePage());
       default:
         return _errorRoute();
     }

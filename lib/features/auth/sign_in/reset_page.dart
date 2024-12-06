@@ -29,7 +29,7 @@ class ResetPage extends StatelessWidget {
                   RouteNames.signInEmail,
                 );
               },
-              imgURL: "assets/images/back_arrow.png",
+              imgURL: "assets/icons/back_arrow.png",
             ),
             const SizedBox(
               height: 20,

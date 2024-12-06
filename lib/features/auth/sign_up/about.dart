@@ -197,7 +197,7 @@ class _LogInAboutState extends State<LogInAbout> {
                         ),
                         DropdownButton(
                           icon: Image.asset(
-                            "assets/images/down_arrow.png",
+                            "assets/icons/down_arrow.png",
                           ),
                           dropdownColor: CustomColor.greyColor,
                           underline: const SizedBox(),

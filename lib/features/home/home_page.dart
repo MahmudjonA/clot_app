@@ -66,7 +66,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ],
-                icon: Image.asset("assets/images/down_arrow.png"),
+                icon: Image.asset(
+                  "assets/icons/down_arrow.png",
+                ),
               ),
             ),
           ),
@@ -160,33 +162,21 @@ class _HomePageState extends State<HomePage> {
                       "assets/category_images/hoodie.png",
                       "Hoodies",
                     ),
-                    const SizedBox(
-                      width: 10,
+                    circleAvatar(
+                      "assets/category_images/shorts.png",
+                      "Shorts",
                     ),
                     circleAvatar(
-                      "assets/images/shop.png",
-                      "Hoodies",
-                    ),
-                    const SizedBox(
-                      width: 10,
+                      "assets/category_images/boots.png",
+                      "Shoes",
                     ),
                     circleAvatar(
-                      "assets/images/shop.png",
-                      "Hoodies",
-                    ),
-                    const SizedBox(
-                      width: 10,
+                      "assets/category_images/bag.png",
+                      "Bag",
                     ),
                     circleAvatar(
-                      "assets/images/shop.png",
-                      "Hoodies",
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    circleAvatar(
-                      "assets/images/shop.png",
-                      "Hoodies",
+                      "assets/category_images/glasses.png",
+                      "Accessories",
                     ),
                   ],
                 ),

@@ -23,7 +23,7 @@ class ShopCategories extends StatelessWidget {
                     RouteNames.bottomNavBar,
                   );
                 },
-                imgURL: "assets/images/back_arrow.png",
+                imgURL: "assets/icons/back_arrow.png",
               ),
               const SizedBox(
                 height: 20,
@@ -35,19 +35,35 @@ class ShopCategories extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              elevateButton('assets/images/shop.png', "Hoodies",context),
+              elevateButton(
+                "assets/category_images/hoodie.png",
+                "Hoodies",
+                context,
+              ),
               const SizedBox(
                 height: 15,
               ),
-              elevateButton('assets/images/shop.png', "Hoodies",context),
+              elevateButton(
+                "assets/category_images/shorts.png",
+                "Shorts",
+                context,
+              ),
               const SizedBox(
                 height: 15,
               ),
-              elevateButton('assets/images/shop.png', "Hoodies",context),
+              elevateButton(
+                "assets/category_images/boots.png",
+                "Shoes",
+                context,
+              ),
               const SizedBox(
                 height: 15,
               ),
-              elevateButton('assets/images/shop.png', "Hoodies",context),
+              elevateButton(
+                "assets/category_images/bag.png",
+                "Bag",
+                context,
+              ),
             ],
           ),
         ),
@@ -56,7 +72,7 @@ class ShopCategories extends StatelessWidget {
   }
 }
 
-Widget elevateButton(String imgURL, String text,BuildContext context) {
+Widget elevateButton(String imgURL, String text, BuildContext context) {
   return ElevatedButton(
     onPressed: () {
       Navigator.pushNamed(context, RouteNames.productsCategories);
