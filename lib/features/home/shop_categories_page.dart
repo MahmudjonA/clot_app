@@ -19,10 +19,7 @@ class ShopCategories extends StatelessWidget {
             children: [
               Arrow(
                 onPressed: () {
-                  Navigator.pushNamed(
-                    context,
-                    RouteNames.bottomNavBar,
-                  );
+                  Navigator.pop(context);
                 },
                 imgURL: "assets/icons/back_arrow.png",
               ),
@@ -41,7 +38,7 @@ class ShopCategories extends StatelessWidget {
                   text: "Hoodies",
                   onPressed: () {
                     Navigator.pushNamed(context, RouteNames.productsCategories,
-                        arguments: "Hodies");
+                        arguments: "Hoodies");
                   }),
               CategoryButtonWidget(
                   imgURL: "assets/category_images/shorts.png",

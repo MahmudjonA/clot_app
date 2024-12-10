@@ -80,14 +80,21 @@ class ProfilePage extends StatelessWidget {
                   elevatedButton("Address", () {
                     Navigator.pushNamed(context, RouteNames.addressEdit);
                   }),
-                  elevatedButton("Wishlist", () {}),
-                  elevatedButton("Payment", () {}),
+                  elevatedButton("Wishlist", () {
+Navigator.pushNamed(context, RouteNames.wishlist);
+                  }),
+                  elevatedButton("Payment", () {
+                    Navigator.pushNamed(context, RouteNames.paymentPage);
+                  }),
                   elevatedButton("Help", () {}),
                   elevatedButton("Support", () {}),
                 ],
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(
+                        context, RouteNames.signInEmail);
+                  },
                   child: const Text(
                     "Sign Out",
                     style: TextStyle(

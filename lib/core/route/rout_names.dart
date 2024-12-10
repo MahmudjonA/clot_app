@@ -11,5 +11,10 @@ class RouteNames {
   static const String shopCategories = '/shopCategories';
   static const String productsCategories = '/productCategories';
   static const String addressEdit = '/addressEdit';
+  static const String ifHaveNotification = '/ifHaveNotification';
+  static const String addAddress = '/addAddress';
+  static const String paymentPage = '/paymentPage';
+  static const String addCard = '/addCard';
+  static const String wishlist = '/wishlist';
   // static const String profilePage = '/profilePage';
 }

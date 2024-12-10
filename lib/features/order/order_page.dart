@@ -10,22 +10,22 @@ class OrderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColor.mainColor,
+      appBar: AppBar(
+        backgroundColor: CustomColor.mainColor,
+        title: const Text(
+          "Orders",
+          style: TextStyle(
+              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+      ),
       body: SafeArea(
-        child: Container(
-          padding: const EdgeInsets.only(top: 71),
-          height: 550,
+        child: SizedBox(
           width: double.infinity,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text(
-                "Orders",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
-              ),
               Column(
                 children: [
                   Image.asset(
@@ -47,7 +47,7 @@ class OrderPage extends StatelessWidget {
                       minimumSize: const Size(185, 52),
                     ),
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context,RouteNames.shopCategories);
+                      Navigator.pushNamed(context, RouteNames.shopCategories);
                     },
                     child: const Text(
                       "Explore Categories",

@@ -1,6 +1,7 @@
 import 'package:clot_app/core/constants/color.dart';
 import 'package:clot_app/core/route/rout_names.dart';
 import 'package:clot_app/features/auth/widgets/arrow.dart';
+import 'package:clot_app/features/profile/widgets/address_edit_widget.dart';
 import 'package:flutter/material.dart';
 
 class AddressEdit extends StatelessWidget {
@@ -39,49 +40,12 @@ class AddressEdit extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              addressEdit(),
-              addressEdit(),
-
+              AddressEditWidget(),
+              AddressEditWidget(),
             ],
           ),
         ),
       ),
     );
   }
-}
-Widget addressEdit(){
-  return Padding(
-    padding: const EdgeInsets.only(top: 15),
-    child: Container(
-      padding: const EdgeInsets.all(12),
-      width: double.infinity,
-      height: 80,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: CustomColor.greyColor,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const Text(
-            "2715 Ash Dr. San Jose, South Dakota 83475",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-            ),
-          ),
-          TextButton(
-            onPressed: () {},
-            child: const Text(
-              "Edit",
-              style: TextStyle(
-                color: CustomColor.buttonColor,
-                fontSize: 16,
-              ),
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
 }

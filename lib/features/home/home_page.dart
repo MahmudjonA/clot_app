@@ -161,22 +161,47 @@ class _HomePageState extends State<HomePage> {
                     circleAvatar(
                       "assets/category_images/hoodie.png",
                       "Hoodies",
+                      () {
+                        Navigator.pushNamed(
+                            context, RouteNames.productsCategories,
+                            arguments: "Hoodies");
+                      },
                     ),
                     circleAvatar(
                       "assets/category_images/shorts.png",
                       "Shorts",
+                      () {
+                        Navigator.pushNamed(
+                            context, RouteNames.productsCategories,
+                            arguments: "Shorts");
+                      },
                     ),
                     circleAvatar(
                       "assets/category_images/boots.png",
                       "Shoes",
+                      () {
+                        Navigator.pushNamed(
+                            context, RouteNames.productsCategories,
+                            arguments: "Shoes");
+                      },
                     ),
                     circleAvatar(
                       "assets/category_images/bag.png",
                       "Bag",
+                      () {
+                        Navigator.pushNamed(
+                            context, RouteNames.productsCategories,
+                            arguments: "Bag");
+                      },
                     ),
                     circleAvatar(
                       "assets/category_images/glasses.png",
                       "Accessories",
+                      () {
+                        Navigator.pushNamed(
+                            context, RouteNames.productsCategories,
+                            arguments: "Accessories");
+                      },
                     ),
                   ],
                 ),
@@ -194,7 +219,8 @@ class _HomePageState extends State<HomePage> {
                   TextButton(
                     onPressed: () {
                       Navigator.pushNamed(
-                          context, RouteNames.productsCategories);
+                          context, RouteNames.productsCategories,
+                          arguments: 'Top Selling');
                     },
                     child: const Text(
                       "See All",
@@ -248,7 +274,10 @@ class _HomePageState extends State<HomePage> {
                   TextButton(
                     onPressed: () {
                       Navigator.pushNamed(
-                          context, RouteNames.productsCategories);
+                        context,
+                        RouteNames.productsCategories,
+                        arguments: 'New in',
+                      );
                     },
                     child: const Text(
                       "See All",

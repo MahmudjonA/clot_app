@@ -16,11 +16,11 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int _currentIndex = 0;
 
-  List<Widget> pages = const [
-    HomePage(),
+  List<Widget> pages = [
+    const HomePage(),
     NotificationPage(),
-    OrderPage(),
-    ProfilePage(),
+    const OrderPage(),
+    const ProfilePage(),
   ];
 
   @override
