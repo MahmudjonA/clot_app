@@ -1,26 +1,30 @@
 import 'package:clot_app/core/route/rout_names.dart';
+import 'package:clot_app/features/order/orders.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/constants/color.dart';
 
 class OrderPage extends StatelessWidget {
+  final bool hasOrders = false;
+
   const OrderPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: CustomColor.mainColor,
-      appBar: AppBar(
+    return SafeArea(
+      child: Scaffold(
         backgroundColor: CustomColor.mainColor,
-        title: const Text(
-          "Orders",
-          style: TextStyle(
-              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+        appBar: AppBar(
+          backgroundColor: CustomColor.mainColor,
+          title: const Text(
+            "Orders",
+            style: TextStyle(
+                color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          centerTitle: true,
         ),
-        centerTitle: true,
-      ),
-      body: SafeArea(
-        child: SizedBox(
+        body: hasOrders
+            ? SizedBox(
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -47,7 +51,7 @@ class OrderPage extends StatelessWidget {
                       minimumSize: const Size(185, 52),
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, RouteNames.shopCategories);
+                      Navigator.pushNamed(context, RouteNames.orders);
                     },
                     child: const Text(
                       "Explore Categories",
@@ -61,8 +65,9 @@ class OrderPage extends StatelessWidget {
               )
             ],
           ),
-        ),
-      ),
+        )
+            : const Orders(),
+      )
     );
   }
 }

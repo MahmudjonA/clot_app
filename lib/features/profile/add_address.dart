@@ -1,5 +1,4 @@
 import 'package:clot_app/core/constants/color.dart';
-import 'package:clot_app/core/route/rout_names.dart';
 import 'package:clot_app/features/auth/widgets/arrow.dart';
 import 'package:clot_app/features/auth/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +22,7 @@ class AddAddress extends StatelessWidget {
                 children: [
                   Arrow(
                     onPressed: () {
-                      Navigator.pushNamed(context, RouteNames.addressEdit);
+                      Navigator.pop(context);
                     },
                     imgURL: "assets/icons/back_arrow.png",
                   ),
@@ -135,7 +134,7 @@ class AddAddress extends StatelessWidget {
               ),
               CustomButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, RouteNames.addressEdit);
+                    Navigator.pop(context);
                   },
                   text: 'Save')
             ],

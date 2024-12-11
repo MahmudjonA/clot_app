@@ -11,20 +11,28 @@ class Wishlist extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: CustomColor.mainColor,
+        appBar: AppBar(
+          leading: Arrow(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            imgURL: 'assets/icons/back_arrow.png',
+          ),
+          backgroundColor: CustomColor.mainColor,
+          centerTitle: true,
+          title: const Text(
+            "Notifications",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
         body: Padding(
           padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
           child: Column(
             children: [
-              const Text(
-                "Notifications",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
               notice("My Favorite", "12 Products", () {
                 Navigator.pushNamed(context, RouteNames.productsCategories,
                     arguments: 'My Favorite');

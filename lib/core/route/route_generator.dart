@@ -8,6 +8,7 @@ import 'package:clot_app/features/auth/sign_up/about.dart';
 import 'package:clot_app/features/auth/sign_in/reset_page.dart';
 import 'package:clot_app/features/auth/sign_in/send_email.dart';
 import 'package:clot_app/features/auth/sign_in/sign_in_email.dart';
+import 'package:clot_app/features/order/orders.dart';
 import 'package:clot_app/features/profile/add_address.dart';
 import 'package:clot_app/features/profile/add_card_page.dart';
 import 'package:clot_app/features/profile/address_edit.dart';
@@ -59,6 +60,8 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => const AddCardPage());
       case RouteNames.wishlist:
         return MaterialPageRoute(builder: (_) => const Wishlist());
+      case RouteNames.orders:
+        return MaterialPageRoute(builder: (_) => const Orders());
       // case RouteNames.profilePage:
       //   return MaterialPageRoute(builder: (_) => const ProfilePage());
       default:

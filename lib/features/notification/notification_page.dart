@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import '../../core/route/rout_names.dart';
 
 class NotificationPage extends StatelessWidget {
-  NotificationPage({super.key});
+  final bool hasNotification = true;
 
-  bool hasNotification = true;
+  const NotificationPage({super.key});
 
   @override
   Widget build(BuildContext context) {

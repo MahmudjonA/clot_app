@@ -38,9 +38,11 @@ class _HomePageState extends State<HomePage> {
                 dropdownColor: CustomColor.greyColor,
                 underline: const SizedBox(),
                 onChanged: (String? newValue) {
-                  setState(() {
-                    selectedGender = newValue!;
-                  });
+                  setState(
+                    () {
+                      selectedGender = newValue!;
+                    },
+                  );
                 },
                 items: const [
                   DropdownMenuItem(
