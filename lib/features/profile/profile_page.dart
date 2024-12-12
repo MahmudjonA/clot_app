@@ -2,8 +2,6 @@ import 'package:clot_app/core/constants/color.dart';
 import 'package:clot_app/core/route/rout_names.dart';
 import 'package:flutter/material.dart';
 
-import 'address_edit.dart';
-
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 

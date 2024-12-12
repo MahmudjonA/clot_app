@@ -1,3 +1,4 @@
+import 'package:clot_app/core/route/rout_names.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 import '../../../core/constants/color.dart';
@@ -45,7 +46,11 @@ class OrderWidget extends StatelessWidget {
             ],
           ),
           Expanded(child: Container()),
-          Arrow(onPressed: () {}, imgURL: 'assets/icons/right_arrow.png')
+          Arrow(
+              onPressed: () {
+                Navigator.pushNamed(context, RouteNames.ordersDetails);
+              },
+              imgURL: 'assets/icons/right_arrow.png')
         ],
       ),
     );

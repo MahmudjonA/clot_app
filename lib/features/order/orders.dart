@@ -1,7 +1,5 @@
-import 'package:clot_app/features/auth/widgets/arrow.dart';
 import 'package:clot_app/features/order/widgets/order_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax_plus/iconsax_plus.dart';
 import '../../core/constants/color.dart';
 
 class Orders extends StatefulWidget {
