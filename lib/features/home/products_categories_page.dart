@@ -2,6 +2,7 @@ import 'package:clot_app/core/constants/color.dart';
 import 'package:clot_app/core/route/rout_names.dart';
 import 'package:clot_app/features/home/widgets/custom_clip_rect.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 import '../auth/widgets/arrow.dart';
 
 class ProductsCategories extends StatelessWidget {
@@ -24,7 +25,7 @@ class ProductsCategories extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                imgURL: "assets/icons/back_arrow.png",
+                icon: IconsaxPlusBroken.arrow_left_2,
               ),
               const SizedBox(
                 height: 20,

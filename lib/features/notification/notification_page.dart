@@ -1,7 +1,6 @@
 import 'package:clot_app/core/constants/color.dart';
 import 'package:clot_app/features/notification/widgets/notice.dart';
 import 'package:flutter/material.dart';
-
 import '../../core/route/rout_names.dart';
 
 class NotificationPage extends StatelessWidget {

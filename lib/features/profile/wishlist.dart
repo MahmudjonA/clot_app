@@ -1,6 +1,7 @@
 import 'package:clot_app/core/route/rout_names.dart';
 import 'package:clot_app/features/auth/widgets/arrow.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 import '../../core/constants/color.dart';
 
 class Wishlist extends StatelessWidget {
@@ -16,12 +17,12 @@ class Wishlist extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            imgURL: 'assets/icons/back_arrow.png',
+            icon: IconsaxPlusBroken.arrow_left_2,
           ),
           backgroundColor: CustomColor.mainColor,
           centerTitle: true,
           title: const Text(
-            "Notifications",
+            "Wishlist",
             style: TextStyle(
               color: Colors.white,
               fontSize: 16,
@@ -52,51 +53,54 @@ class Wishlist extends StatelessWidget {
 Widget notice(String text, String bText, VoidCallback onPressed) {
   return Padding(
     padding: const EdgeInsets.only(bottom: 15),
-    child: Container(
-      height: 72,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: CustomColor.greyColor,
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset(
-              "assets/icons/like.png",
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  text,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+    child: GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        height: 72,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: CustomColor.greyColor,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.asset(
+                "assets/icons/like.png",
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    text,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                Text(
-                  bText,
-                  style: const TextStyle(
-                    color: Colors.white,
+                  Text(
+                    bText,
+                    style: const TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              width: 210,
-            ),
-            Arrow(
-              onPressed: onPressed,
-              imgURL: 'assets/icons/right_arrow.png',
-            ),
-          ],
+                ],
+              ),
+              const SizedBox(
+                width: 210,
+              ),
+              Arrow(
+                onPressed: onPressed,
+                icon: IconsaxPlusBroken.arrow_right_3,
+              ),
+            ],
+          ),
         ),
       ),
     ),

@@ -2,6 +2,8 @@ import 'package:clot_app/core/route/rout_names.dart';
 import 'package:clot_app/features/bottom_nav_bar.dart';
 import 'package:clot_app/features/auth/sign_up/sign_up.dart';
 import 'package:clot_app/features/home/products_categories_page.dart';
+import 'package:clot_app/features/home/search_page/if_not_found.dart';
+import 'package:clot_app/features/home/search_page/search_page_main.dart';
 import 'package:clot_app/features/home/shop_categories_page.dart';
 import 'package:clot_app/features/into/splash_page.dart';
 import 'package:clot_app/features/auth/sign_up/about.dart';
@@ -17,6 +19,7 @@ import 'package:clot_app/features/profile/payment_page.dart';
 import 'package:clot_app/features/profile/wishlist.dart';
 import 'package:flutter/material.dart';
 import '../../features/auth/sign_in/sing_in_password.dart';
+import '../../features/home/search_page/if_found.dart';
 
 class AppRoute {
   BuildContext context;
@@ -65,6 +68,12 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => const Orders());
       case RouteNames.ordersDetails:
         return MaterialPageRoute(builder: (_) => const OrderDetails());
+      case RouteNames.searchPageMain:
+        return MaterialPageRoute(builder: (_) => const SearchPageMain());
+      case RouteNames.ifNotFound:
+        return MaterialPageRoute(builder: (_) => const IfNotFound());
+      case RouteNames.ifFound:
+        return MaterialPageRoute(builder: (_) => const IfFound());
       // case RouteNames.profilePage:
       //   return MaterialPageRoute(builder: (_) => const ProfilePage());
       default:

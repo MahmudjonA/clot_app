@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 import '../../core/constants/color.dart';
 import '../auth/widgets/arrow.dart';
 import '../auth/widgets/custom_button.dart';
@@ -24,7 +25,7 @@ class AddCardPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    imgURL: "assets/icons/back_arrow.png",
+                    icon: IconsaxPlusBroken.arrow_left_2,
                   ),
                   const Text(
                     "Add Card",

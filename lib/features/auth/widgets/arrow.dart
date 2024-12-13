@@ -3,25 +3,35 @@ import '../../../core/constants/color.dart';
 
 class Arrow extends StatelessWidget {
   final VoidCallback onPressed;
-  final String? imgURL;
+  final IconData icon;
 
-  const Arrow({super.key, required this.onPressed, required this.imgURL});
+  const Arrow({super.key, required this.onPressed, required this.icon});
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.zero,
+    return IconButton(
+      style: IconButton.styleFrom(
         backgroundColor: CustomColor.greyColor,
-        minimumSize: const Size(40, 40),
       ),
       onPressed: onPressed,
-      child: Image.asset(
-        // "assets/images/back_arrow.png",
-        imgURL!,
-        height: 40,
-        width: 40,
+      icon:  Icon(
+        icon,
+        color: Colors.white,
+
       ),
     );
   }
 }
+
+// return ElevatedButton(
+//   style: ElevatedButton.styleFrom(
+//     padding: EdgeInsets.zero,
+//     backgroundColor: CustomColor.greyColor,
+//     minimumSize: const Size(40, 40),
+//   ),
+//   onPressed: onPressed,
+//   child: Icon(
+//   icon,
+//     color: CustomColor.whiteColor,
+//   ),
+// );

@@ -18,5 +18,8 @@ class RouteNames {
   static const String wishlist = '/wishlist';
   static const String orders = '/orders';
   static const String ordersDetails = '/ordersDetails';
+  static const String searchPageMain = '/searchPageMain';
+  static const String ifNotFound = '/ifNotFound';
+  static const String ifFound = '/ifFound';
   // static const String profilePage = '/profilePage';
 }
