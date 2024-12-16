@@ -45,8 +45,6 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => const ResetPage());
       case RouteNames.sendEmailPage:
         return MaterialPageRoute(builder: (_) => const SendEmail());
-      // case RouteNames.homePage:
-      //   return MaterialPageRoute(builder: (_) => const HomePage());
       case RouteNames.logInAbout:
         return MaterialPageRoute(builder: (_) => const LogInAbout());
       case RouteNames.bottomNavBar:
