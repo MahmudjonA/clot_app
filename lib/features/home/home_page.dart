@@ -82,11 +82,13 @@ class _HomePageState extends State<HomePage> {
                 backgroundColor: CustomColor.buttonColor,
                 minimumSize: const Size(40, 40),
               ),
-              onPressed: () {},
-              child: Image.asset(
-                "assets/images/shop.png",
-                height: 40,
-                width: 40,
+              onPressed: () {
+                // Navigator.pushNamed(context, RouteNames.cartMain);
+                Navigator.pushNamed(context, RouteNames.cartPage);
+              },
+              child: const Icon(
+                IconsaxPlusBroken.bag_2,
+                color: CustomColor.whiteColor,
               ),
             ),
           ],
@@ -102,9 +104,7 @@ class _HomePageState extends State<HomePage> {
                 height: 50,
                 child: GestureDetector(
                   onTap: () {
-                    //Navigator.pushNamed(context, RouteNames.searchPageMain);
-                    //Navigator.pushNamed(context, RouteNames.ifNotFound);
-                    Navigator.pushNamed(context, RouteNames.ifFound);
+                    Navigator.pushNamed(context, RouteNames.searchPageMain);
                   },
                   child: Container(
                     decoration: BoxDecoration(

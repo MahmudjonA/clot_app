@@ -14,10 +14,9 @@ class Arrow extends StatelessWidget {
         backgroundColor: CustomColor.greyColor,
       ),
       onPressed: onPressed,
-      icon:  Icon(
+      icon: Icon(
         icon,
         color: Colors.white,
-
       ),
     );
   }

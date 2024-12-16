@@ -1,6 +1,7 @@
 import 'package:clot_app/core/constants/color.dart';
 import 'package:clot_app/core/route/rout_names.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -79,7 +80,7 @@ class ProfilePage extends StatelessWidget {
                     Navigator.pushNamed(context, RouteNames.addressEdit);
                   }),
                   elevatedButton("Wishlist", () {
-Navigator.pushNamed(context, RouteNames.wishlist);
+                    Navigator.pushNamed(context, RouteNames.wishlist);
                   }),
                   elevatedButton("Payment", () {
                     Navigator.pushNamed(context, RouteNames.paymentPage);
@@ -130,8 +131,9 @@ Widget elevatedButton(String text, VoidCallback onPressed) {
             style: const TextStyle(
                 color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
           ),
-          Image.asset(
-            "assets/icons/right_arrow.png",
+          const Icon(
+            IconsaxPlusBroken.arrow_right_3,
+            color: CustomColor.whiteColor,
           ),
         ],
       ),

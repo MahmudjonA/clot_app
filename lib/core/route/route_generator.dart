@@ -1,9 +1,11 @@
 import 'package:clot_app/core/route/rout_names.dart';
 import 'package:clot_app/features/bottom_nav_bar.dart';
 import 'package:clot_app/features/auth/sign_up/sign_up.dart';
+import 'package:clot_app/features/cart/cart_main.dart';
+import 'package:clot_app/features/cart/cart_page.dart';
+import 'package:clot_app/features/cart/checkout_page.dart';
+import 'package:clot_app/features/cart/message_page.dart';
 import 'package:clot_app/features/home/products_categories_page.dart';
-import 'package:clot_app/features/home/search_page/if_not_found.dart';
-import 'package:clot_app/features/home/search_page/search_page_main.dart';
 import 'package:clot_app/features/home/shop_categories_page.dart';
 import 'package:clot_app/features/into/splash_page.dart';
 import 'package:clot_app/features/auth/sign_up/about.dart';
@@ -17,9 +19,12 @@ import 'package:clot_app/features/profile/add_card_page.dart';
 import 'package:clot_app/features/profile/address_edit.dart';
 import 'package:clot_app/features/profile/payment_page.dart';
 import 'package:clot_app/features/profile/wishlist.dart';
+import 'package:clot_app/features/search_page/main_search_page.dart';
 import 'package:flutter/material.dart';
 import '../../features/auth/sign_in/sing_in_password.dart';
-import '../../features/home/search_page/if_found.dart';
+import '../../features/search_page/if_found.dart';
+import '../../features/search_page/if_not_found.dart';
+import '../../features/search_page/search_page_controller.dart';
 
 class AppRoute {
   BuildContext context;
@@ -74,6 +79,16 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => const IfNotFound());
       case RouteNames.ifFound:
         return MaterialPageRoute(builder: (_) => const IfFound());
+      case RouteNames.mainSearchPage:
+        return MaterialPageRoute(builder: (_) => const MainSearchPage());
+      case RouteNames.cartMain:
+        return MaterialPageRoute(builder: (_) => const CartMain());
+      case RouteNames.cartPage:
+        return MaterialPageRoute(builder: (_) => const CartPage());
+      case RouteNames.checkoutPage:
+        return MaterialPageRoute(builder: (_) => const CheckoutPage());
+      case RouteNames.messagePage:
+        return MaterialPageRoute(builder: (_) => const MessagePage());
       // case RouteNames.profilePage:
       //   return MaterialPageRoute(builder: (_) => const ProfilePage());
       default:

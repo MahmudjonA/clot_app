@@ -18,7 +18,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   List<Widget> pages = [
     const HomePage(),
-    NotificationPage(),
+    const NotificationPage(),
     const OrderPage(),
     const ProfilePage(),
   ];

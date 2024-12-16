@@ -13,11 +13,17 @@ class Wishlist extends StatelessWidget {
       child: Scaffold(
         backgroundColor: CustomColor.mainColor,
         appBar: AppBar(
-          leading: Arrow(
+          leading: IconButton(
+            style: IconButton.styleFrom(
+              backgroundColor: CustomColor.greyColor,
+            ),
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: IconsaxPlusBroken.arrow_left_2,
+            icon: const Icon(
+              IconsaxPlusBroken.arrow_left_2,
+              color: Colors.white,
+            ),
           ),
           backgroundColor: CustomColor.mainColor,
           centerTitle: true,

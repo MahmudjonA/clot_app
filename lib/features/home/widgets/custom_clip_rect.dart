@@ -6,11 +6,12 @@ class CustomClipRRect extends StatelessWidget {
   final String? text;
   final double? price;
 
-  const CustomClipRRect(
-      {super.key,
-      required this.imgURL,
-      required this.text,
-      required this.price});
+  const CustomClipRRect({
+    super.key,
+    required this.imgURL,
+    required this.text,
+    required this.price,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class CustomClipRRect extends StatelessWidget {
       child: Column(
         children: [
           Stack(
-            children:[
+            children: [
               ClipRRect(
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(8),

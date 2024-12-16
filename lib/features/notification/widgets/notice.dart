@@ -1,42 +1,31 @@
 import 'package:flutter/material.dart';
-
 import '../../../core/constants/color.dart';
 
-Widget notice(String text, String b_text) {
+Widget notice(String text) {
   return Padding(
-    padding: const EdgeInsets.only(bottom: 15),
+    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
     child: Container(
-      height: 72,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: CustomColor.greyColor,
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(12.0),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset("assets/icons/bell_n.png"),
-            const SizedBox(
-              width: 10,
+            Image.asset(
+              "assets/icons/bell_n.png",
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  text,
-                  style: const TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-                Text(
-                  b_text,
-                  style: const TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-            )
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                text,
+                style: const TextStyle(color: Colors.white, fontSize: 14),
+                overflow: TextOverflow.ellipsis,
+                maxLines: 2,
+              ),
+            ),
           ],
         ),
       ),

@@ -28,16 +28,13 @@ class NotificationPage extends StatelessWidget {
                 child: Column(
                   children: [
                     notice(
-                      "Gilbert, you placed and order check your",
-                      "order history for full details",
+                      "Gilbert, you placed and order check your order history for full details",
                     ),
                     notice(
-                      "Gilbert, you placed and order check your",
-                      "order history for full details",
+                      "Gilbert, you placed and order check your order history for full details",
                     ),
                     notice(
-                      "Gilbert, you placed and order check your",
-                      "order history for full details",
+                      "Gilbert, you placed and order check your order history for full details",
                     ),
                   ],
                 ),
