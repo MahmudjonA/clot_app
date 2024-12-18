@@ -66,6 +66,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   }
 }
 
+// ignore: non_constant_identifier_names
 BottomNavigationBarItem BottomNavigationBarItemWidget(
     String label, String imageUrl) {
   return BottomNavigationBarItem(
