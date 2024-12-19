@@ -6,11 +6,7 @@ class LogInForms extends StatelessWidget {
   final String? text;
   final bool hideText;
 
-  LogInForms({
-    super.key,
-    required this.text,
-    required this.hideText
-  });
+  LogInForms({super.key, required this.text, required this.hideText});
 
   @override
   Widget build(BuildContext context) {

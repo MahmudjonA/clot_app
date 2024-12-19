@@ -2,6 +2,7 @@ import 'package:clot_app/core/constants/color.dart';
 import 'package:clot_app/core/route/rout_names.dart';
 import 'package:clot_app/features/home/widgets/custom_clip_rect.dart';
 import 'package:clot_app/features/home/widgets/my_circle_avatar.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
@@ -115,17 +116,17 @@ class _HomePageState extends State<HomePage> {
                       vertical: 15.0,
                       horizontal: 20.0,
                     ),
-                    child: const Row(
+                    child: Row(
                       children: [
-                        Icon(
+                        const Icon(
                           IconsaxPlusBroken.search_normal_1,
                           color: CustomColor.whiteColor,
                           size: 25,
                         ),
-                        SizedBox(width: 15.0),
+                        const SizedBox(width: 15.0),
                         Text(
-                          'Search',
-                          style: TextStyle(
+                          tr('homePage.search'),
+                          style: const TextStyle(
                             color: CustomColor.whiteColor,
                             fontSize: 16.0,
                           ),
@@ -141,9 +142,9 @@ class _HomePageState extends State<HomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    "Categories",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  Text(
+                    tr("homePage.categories"),
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   TextButton(
                     onPressed: () {
@@ -152,9 +153,9 @@ class _HomePageState extends State<HomePage> {
                         RouteNames.shopCategories,
                       );
                     },
-                    child: const Text(
-                      "See All",
-                      style: TextStyle(
+                    child: Text(
+                      tr("homePage.seeAll"),
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                       ),
@@ -172,7 +173,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     circleAvatar(
                       "assets/category_images/hoodie.png",
-                      "Hoodies",
+                      tr("homePage.hoodies"),
                       () {
                         Navigator.pushNamed(
                             context, RouteNames.productsCategories,
@@ -181,7 +182,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     circleAvatar(
                       "assets/category_images/shorts.png",
-                      "Shorts",
+                      tr("homePage.shorts"),
                       () {
                         Navigator.pushNamed(
                             context, RouteNames.productsCategories,
@@ -190,7 +191,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     circleAvatar(
                       "assets/category_images/boots.png",
-                      "Shoes",
+                      tr('homePage.shoes'),
                       () {
                         Navigator.pushNamed(
                             context, RouteNames.productsCategories,
@@ -199,7 +200,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     circleAvatar(
                       "assets/category_images/bag.png",
-                      "Bag",
+                      tr('homePage.bag'),
                       () {
                         Navigator.pushNamed(
                             context, RouteNames.productsCategories,
@@ -208,7 +209,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     circleAvatar(
                       "assets/category_images/glasses.png",
-                      "Accessories",
+                      tr('homePage.accessories'),
                       () {
                         Navigator.pushNamed(
                             context, RouteNames.productsCategories,
@@ -224,9 +225,9 @@ class _HomePageState extends State<HomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    "Top Selling",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  Text(
+                    tr('homePage.topSelling'),
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   TextButton(
                     onPressed: () {
@@ -234,9 +235,9 @@ class _HomePageState extends State<HomePage> {
                           context, RouteNames.productsCategories,
                           arguments: 'Top Selling');
                     },
-                    child: const Text(
-                      "See All",
-                      style: TextStyle(
+                    child: Text(
+                      tr('homePage.seeAll'),
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                       ),
@@ -276,9 +277,9 @@ class _HomePageState extends State<HomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    "New in",
-                    style: TextStyle(
+                  Text(
+                    tr("homePage.newIn"),
+                    style: const TextStyle(
                         color: CustomColor.buttonColor,
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
@@ -291,9 +292,9 @@ class _HomePageState extends State<HomePage> {
                         arguments: 'New in',
                       );
                     },
-                    child: const Text(
-                      "See All",
-                      style: TextStyle(
+                    child: Text(
+                      tr('homePage.seeAll'),
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                       ),

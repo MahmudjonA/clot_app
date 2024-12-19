@@ -1,0 +1,119 @@
+{
+  "signInEmail": {
+    "title": "Sign in",
+    "emailAddress": "Email Address",
+    "continue": "Continue",
+    "noAccount": "Don't have an Account?",
+    "createOne": "Create One",
+    "continueWithApple": "Continue With Apple",
+    "continueWithGoogle": "Continue With Google",
+    "continueWithFacebook": "Continue With Facebook"
+  },
+  "sendEmail": {
+    "message": "We sent you an email to reset \nyour password.",
+    "returnToLogin": "Return to Login"
+  },
+  "resetPage": {
+    "forgotPassword": "Forgot Password",
+    "enterEmailAddress": "Enter Email Address",
+    "continue": "Continue"
+  },
+  "signInPassword": {
+    "title": "Sign in",
+    "password": "Password",
+    "continue": "Continue",
+    "forgotPassword": "Forgot Password?",
+    "reset": "Reset"
+  },
+  "logInAbout": {
+    "title": "Tell us About yourself",
+    "whoDoYouShopFor": "Who do you shop for?",
+    "men": "Men",
+    "women": "Women",
+    "howOldAreYou": "How Old are you?",
+    "ageRange": "Age range",
+    "selectAgeRange": "Select Age Range",
+    "finish": "Finish"
+  },
+  "createAccount": {
+    "title": "Create Account",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "emailAddress": "Email Address",
+    "password": "Password",
+    "continue": "Continue",
+    "haveAccount": "You have an account?",
+    "alreadyHave": "I already have",
+    "backToSignIn": "Back to Sign In"
+  },
+  "categories": [
+    {
+      "name": "Hoodies",
+      "image": "assets/category_images/hoodie.png",
+      "route": "RouteNames.productsCategories",
+      "argument": "Hoodies"
+    },
+    {
+      "name": "Shorts",
+      "image": "assets/category_images/shorts.png",
+      "route": "RouteNames.productsCategories",
+      "argument": "Shorts"
+    },
+    {
+      "name": "Shoes",
+      "image": "assets/category_images/boots.png",
+      "route": "RouteNames.productsCategories",
+      "argument": "Shoes"
+    },
+    {
+      "name": "Bag",
+      "image": "assets/category_images/bag.png",
+      "route": "RouteNames.productsCategories",
+      "argument": "Bag"
+    },
+    {
+      "name": "Accessories",
+      "image": "assets/category_images/glasses.png",
+      "route": "RouteNames.productsCategories",
+      "argument": "Accessories"
+    }
+  ],
+  "topSellingItems": [
+    {
+      "image": "assets/images/boy.png",
+      "name": "Men's Harrington Jacket",
+      "price": 1755,
+      "route": "RouteNames.productDetailPage",
+      "argument": "Men's Harrington Jacket"
+    },
+    {
+      "image": "assets/images/boy.png",
+      "name": "Men's Harrington Jacket",
+      "price": 1755,
+      "route": "RouteNames.productDetailPage",
+      "argument": "Men's Harrington Jacket"
+    },
+    {
+      "image": "assets/images/boy.png",
+      "name": "Men's Harrington Jacket",
+      "price": 1755,
+      "route": "RouteNames.productDetailPage",
+      "argument": "Men's Harrington Jacket"
+    }
+  ],
+  "homePage": {
+    "categories": "Categories",
+    "seeAll": "See All",
+    "search": "Search",
+    "topSelling": "Top Selling",
+    "newIn": "New In",
+    "hoodies": "Hoodies",
+    "shorts": "Shorts",
+    "shoes": "Shoes",
+    "bag": "Bag",
+    "accessories": "Accessories",
+    "menJacket": "Men's Harrington Jacket",
+    "womenJacket": "Women's Harrington Jacket"
+  }
+}
+

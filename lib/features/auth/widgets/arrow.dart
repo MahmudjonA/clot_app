@@ -21,16 +21,3 @@ class Arrow extends StatelessWidget {
     );
   }
 }
-
-// return ElevatedButton(
-//   style: ElevatedButton.styleFrom(
-//     padding: EdgeInsets.zero,
-//     backgroundColor: CustomColor.greyColor,
-//     minimumSize: const Size(40, 40),
-//   ),
-//   onPressed: onPressed,
-//   child: Icon(
-//   icon,
-//     color: CustomColor.whiteColor,
-//   ),
-// );

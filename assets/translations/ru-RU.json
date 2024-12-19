@@ -1,0 +1,63 @@
+{
+  "signInEmail": {
+    "title": "Войти",
+    "emailAddress": "Адрес электронной почты",
+    "continue": "Продолжить",
+    "noAccount": "Нет аккаунта?",
+    "createOne": "Создать аккаунт",
+    "continueWithApple": "Продолжить с Apple",
+    "continueWithGoogle": "Продолжить с Google",
+    "continueWithFacebook": "Продолжить с Facebook"
+  },
+  "sendEmail": {
+    "message": "Мы отправили вам письмо для сброса \nвашего пароля.",
+    "returnToLogin": "Вернуться к входу"
+  },
+  "resetPage": {
+    "forgotPassword": "Забыли пароль",
+    "enterEmailAddress": "Введите адрес электронной почты",
+    "continue": "Продолжить"
+  },
+  "signInPassword": {
+    "title": "Войти",
+    "password": "Пароль",
+    "continue": "Продолжить",
+    "forgotPassword": "Забыли пароль?",
+    "reset": "Сбросить"
+  },
+  "logInAbout": {
+    "title": "Расскажите о себе",
+    "whoDoYouShopFor": "Кому вы покупаете?",
+    "men": "Мужчины",
+    "women": "Женщины",
+    "howOldAreYou": "Сколько вам лет?",
+    "ageRange": "Возрастной диапазон",
+    "selectAgeRange": "Выберите возрастной диапазон",
+    "finish": "Завершить"
+  },
+  "createAccount": {
+    "title": "Создать аккаунт",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "emailAddress": "Адрес электронной почты",
+    "password": "Пароль",
+    "continue": "Продолжить",
+    "haveAccount": "Уже есть аккаунт?",
+    "alreadyHave": "Уже есть",
+    "backToSignIn": "Вернуться к входу"
+  },
+  "homePage": {
+    "categories": "Категории",
+    "seeAll": "Смотреть все",
+    "search": "Поиск",
+    "topSelling": "Топ продаж",
+    "newIn": "Новинки",
+    "hoodies": "Толстовки",
+    "shorts": "Шорты",
+    "shoes": "Обувь",
+    "bag": "Сумки",
+    "accessories": "Аксессуары",
+    "menJacket": "Мужская куртка Harrington",
+    "womenJacket": "Женская куртка Harrington"
+  }
+}

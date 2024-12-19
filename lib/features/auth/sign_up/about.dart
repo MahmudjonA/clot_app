@@ -1,4 +1,6 @@
+import 'package:clot_app/app.dart';
 import 'package:clot_app/core/constants/color.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class LogInAbout extends StatefulWidget {
@@ -45,15 +47,15 @@ class _LogInAboutState extends State<LogInAbout> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const Text(
-                    "Tell us About yourself",
+                   Text(
+                   tr('logInAbout.title'),
                     style: TextStyle(color: Colors.white, fontSize: 30),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  const Text(
-                    "Who do you shop for ?",
+                   Text(
+                    tr('logInAbout.whoDoYouShopFor'),
                     style: TextStyle(color: Colors.white),
                   ),
                   Row(
@@ -71,9 +73,9 @@ class _LogInAboutState extends State<LogInAbout> {
                                 ? CustomColor.buttonColor
                                 : CustomColor.greyColor,
                           ),
-                          child: const Text(
-                            "Men",
-                            style: TextStyle(color: Colors.white),
+                          child:  Text(
+                              tr('logInAbout.men'),
+                            style: const TextStyle(color: Colors.white),
                           ),
                         ),
                       ),
@@ -89,9 +91,9 @@ class _LogInAboutState extends State<LogInAbout> {
                                 ? CustomColor.greyColor
                                 : CustomColor.buttonColor,
                           ),
-                          child: const Text(
-                            "Women",
-                            style: TextStyle(color: Colors.white),
+                          child:  Text(
+                              tr('logInAbout.women'),
+                            style: const TextStyle(color: Colors.white),
                           ),
                         ),
                       ),
@@ -100,75 +102,6 @@ class _LogInAboutState extends State<LogInAbout> {
                 ],
               ),
             ),
-            // SizedBox(
-            //   height: 150,
-            //   width: double.infinity,
-            //   child: Column(
-            //     crossAxisAlignment: CrossAxisAlignment.start,
-            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //     children: [
-            //       const SizedBox(
-            //         height: 25,
-            //       ),
-            //       const Text(
-            //         "How Old are you?",
-            //         style: TextStyle(color: Colors.white),
-            //       ),
-            //       Row(
-            //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //         children: [
-            //           Expanded(
-            //             child: Container(
-            //               height: 60,
-            //               decoration: BoxDecoration(
-            //                 color: CustomColor.greyColor,
-            //                 borderRadius: BorderRadius.circular(8),
-            //               ),
-            //               padding: const EdgeInsets.symmetric(horizontal: 16),
-            //               child: Row(
-            //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //                 children: [
-            //                   const Text(
-            //                     "Age range",
-            //                     style: TextStyle(color: Colors.white),
-            //                   ),
-            //                   ElevatedButton(
-            //                     style: ElevatedButton.styleFrom(
-            //                       padding: EdgeInsets.zero,
-            //                       backgroundColor: CustomColor.greyColor,
-            //                       minimumSize: const Size(40, 40),
-            //                     ),
-            //                     onPressed: () {},
-            //                     child: Image.asset(
-            //                       "assets/images/down_arrow.png",
-            //                       height: 40,
-            //                       width: 40,
-            //                     ),
-            //                   ),
-            //                   DropdownButton<String>(
-            //                     value: dropDownValue,
-            //                     icon: Icon(Icons.account_circle),
-            //                     style: TextStyle(color: Colors.white),
-            //                     onChanged: (String? newValue) {
-            //                       setState(() {
-            //                         dropDownValue = newValue!;
-            //                       });
-            //                     },
-            //                     items: [
-            //                       DropdownMenuItem(
-            //                         child: Text("data"),
-            //                       ),
-            //                     ],
-            //                   ),
-            //                 ],
-            //               ),
-            //             ),
-            //           ),
-            //         ],
-            //       ),
-            //     ],
-            //   ),
-            // ),
             SizedBox(
               height: 150,
               width: double.infinity,
@@ -177,8 +110,8 @@ class _LogInAboutState extends State<LogInAbout> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const SizedBox(height: 25),
-                  const Text(
-                    "How Old are you?",
+                   Text(
+                     tr('logInAbout.howOldAreYou'),
                     style: TextStyle(color: Colors.white),
                   ),
                   Container(
@@ -192,7 +125,7 @@ class _LogInAboutState extends State<LogInAbout> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          selectedAgeRange,
+                          selectedAgeRange.tr(),
                           style: const TextStyle(color: Colors.white),
                         ),
                         DropdownButton(
@@ -258,10 +191,10 @@ class _LogInAboutState extends State<LogInAbout> {
                   onPressed: () {
                     Navigator.pushNamed(context, "/bottomNavBar");
                   },
-                  child: const Center(
+                  child:  Center(
                     child: Text(
-                      "Finish",
-                      style: TextStyle(color: Colors.white),
+                      tr('logInAbout.finish'),
+                      style: const TextStyle(color: Colors.white),
                     ),
                   ),
                 ),

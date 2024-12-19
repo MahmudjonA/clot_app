@@ -2,15 +2,75 @@ import 'package:clot_app/core/constants/color.dart';
 import 'package:clot_app/core/route/rout_names.dart';
 import 'package:clot_app/features/auth/widgets/continue_widget.dart';
 import 'package:clot_app/features/auth/widgets/custom_button.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../widgets/log_in_forms.dart';
 
-class SignInEmail extends StatelessWidget {
+class SignInEmail extends StatefulWidget {
   const SignInEmail({super.key});
+
+  @override
+  State<SignInEmail> createState() => _SignInEmailState();
+}
+
+class _SignInEmailState extends State<SignInEmail> {
+  String selectedLanguage = "Ru";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: CustomColor.mainColor,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: DropdownButton(
+              value: selectedLanguage,
+              dropdownColor: CustomColor.greyColor,
+              underline: const SizedBox(),
+              onChanged: (String? newValue) {
+                setState(
+                  () {
+                    selectedLanguage = newValue!;
+                  },
+                );
+                if (newValue == 'Ru') {
+                  EasyLocalization.of(context)?.setLocale(const Locale('ru', 'RU'));
+                } else if (newValue == 'Us') {
+                  EasyLocalization.of(context)?.setLocale(const Locale('en', 'US'));
+                }
+              },
+              items: const [
+                DropdownMenuItem(
+                  value: "Ru",
+                  child: Row(
+                    children: [
+                      Text(
+                        "Ru",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+                DropdownMenuItem(
+                  value: "Us",
+                  child: Row(
+                    children: [
+                      Text(
+                        "Us",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+              icon: Image.asset(
+                "assets/icons/down_arrow.png",
+              ),
+            ),
+          ),
+        ],
+      ),
       backgroundColor: CustomColor.mainColor,
       body: Padding(
         padding: const EdgeInsets.only(right: 20, left: 20),
@@ -18,9 +78,9 @@ class SignInEmail extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Sign in",
-              style: TextStyle(
+            Text(
+              tr('signInEmail.title'),
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 32,
               ),
@@ -29,24 +89,28 @@ class SignInEmail extends StatelessWidget {
               height: 20,
             ),
             //! Forms
-            LogInForms(text: "Email Address", hideText: false,),
+            LogInForms(
+              text: tr('signInEmail.emailAddress'),
+              hideText: false,
+            ),
             const SizedBox(
               height: 20,
             ),
             //! Custom button
             CustomButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, RouteNames.signInPassword);
-                },
-                text: "Continue"),
+              onPressed: () {
+                Navigator.pushNamed(context, RouteNames.signInPassword);
+              },
+              text: tr('signInEmail.continue'),
+            ),
             const SizedBox(
               height: 20,
             ),
             Row(
               children: [
-                const Text(
-                  "Don't have an Account ?",
-                  style: TextStyle(color: Colors.white, fontSize: 15),
+                Text(
+                  tr('signInEmail.noAccount'),
+                  style: const TextStyle(color: Colors.white, fontSize: 15),
                 ),
                 TextButton(
                   onPressed: () {
@@ -59,8 +123,8 @@ class SignInEmail extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  child: const Text(
-                    "Create One",
+                  child: Text(
+                    tr('signInEmail.createOne'),
                   ),
                 )
               ],
@@ -68,23 +132,23 @@ class SignInEmail extends StatelessWidget {
             const SizedBox(
               height: 50,
             ),
-            const ContinueWidget(
+            ContinueWidget(
               imgURL: "assets/images/apple.png",
-              text: "Continue With Apple",
+              text: tr('signInEmail.continueWithApple'),
             ),
             const SizedBox(
               height: 20,
             ),
-            const ContinueWidget(
+            ContinueWidget(
               imgURL: "assets/images/google.png",
-              text: "Continue With Google",
+              text: tr('signInEmail.continueWithGoogle'),
             ),
             const SizedBox(
               height: 20,
             ),
-            const ContinueWidget(
+            ContinueWidget(
               imgURL: "assets/images/facebook.png",
-              text: "Continue With Facebook",
+              text: tr("continueWithFacebook"),
             ),
           ],
         ),

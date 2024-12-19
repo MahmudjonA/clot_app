@@ -1,6 +1,7 @@
 import 'package:clot_app/core/constants/color.dart';
 import 'package:clot_app/features/auth/widgets/custom_button.dart';
 import 'package:clot_app/features/auth/widgets/log_in_forms.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 import '../../../core/route/rout_names.dart';
@@ -36,9 +37,9 @@ class CreateAccount extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                "Create Account",
-                style: TextStyle(
+              Text(
+                tr('createAccount.title'),
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 32,
                 ),
@@ -53,19 +54,19 @@ class CreateAccount extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     LogInForms(
-                      text: "First Name",
+                      text: tr('createAccount.firstName'),
                       hideText: false,
                     ),
                     LogInForms(
-                      text: "Last Name",
+                      text: tr('createAccount.lastName'),
                       hideText: false,
                     ),
                     LogInForms(
-                      text: "Email Address",
+                      text: tr('createAccount.emailAddress'),
                       hideText: false,
                     ),
                     LogInForms(
-                      text: "Password",
+                      text: tr('createAccount.password'),
                       hideText: true,
                     ),
                   ],
@@ -75,18 +76,19 @@ class CreateAccount extends StatelessWidget {
                 height: 40,
               ),
               CustomButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, RouteNames.logInAbout);
-                  },
-                  text: "Continue"),
+                onPressed: () {
+                  Navigator.pushNamed(context, RouteNames.logInAbout);
+                },
+                text: tr('createAccount.continue'),
+              ),
               const SizedBox(
                 height: 20,
               ),
               Row(
                 children: [
-                  const Text(
-                    "You hava a account ?",
-                    style: TextStyle(color: Colors.white, fontSize: 15),
+                  Text(
+                    tr('createAccount.haveAccount'),
+                    style: const TextStyle(color: Colors.white, fontSize: 15),
                   ),
                   TextButton(
                     onPressed: () {
@@ -100,8 +102,8 @@ class CreateAccount extends StatelessWidget {
                             FontWeight.bold, // Example for bold text (optional)
                       ),
                     ),
-                    child: const Text(
-                      "I already have",
+                    child: Text(
+                      tr('createAccount.alreadyHave'),
                     ),
                   )
                 ],

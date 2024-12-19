@@ -2,6 +2,7 @@ import 'package:clot_app/core/constants/color.dart';
 import 'package:clot_app/core/route/rout_names.dart';
 import 'package:clot_app/features/auth/widgets/custom_button.dart';
 import 'package:clot_app/features/auth/widgets/log_in_forms.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
@@ -41,12 +42,12 @@ class ResetPage extends StatelessWidget {
                 color: Colors.white,
                 fontSize: 35,
               ),
-            ),
+            ).tr(),
             const SizedBox(
               height: 20,
             ),
             LogInForms(
-              text: "Enter Email address",
+              text: tr('resetPage.enterEmailAddress'),
               hideText: false,
             ),
             const SizedBox(
@@ -56,7 +57,7 @@ class ResetPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, RouteNames.sendEmailPage);
                 },
-                text: "Continue"),
+                text: tr('resetPage.continue')),
             const SizedBox(
               height: 300,
             )
